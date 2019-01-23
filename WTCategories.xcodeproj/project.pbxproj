@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA2C317621B5265600F78F79 /* WTImgOffsetButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2C317521B5265600F78F79 /* WTImgOffsetButton.m */; };
+		CA2FDA0F21F6F69100AE5087 /* UITextField+MaxLength.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FDA0E21F6F69100AE5087 /* UITextField+MaxLength.m */; };
 		CA7D2D5621425FA600BC2640 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7D2D5521425FA600BC2640 /* AppDelegate.m */; };
 		CA7D2D5921425FA600BC2640 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7D2D5821425FA600BC2640 /* ViewController.m */; };
 		CA7D2D5C21425FA600BC2640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7D2D5A21425FA600BC2640 /* Main.storyboard */; };
@@ -64,9 +66,14 @@
 		CA7D2F6D21426E4400BC2640 /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = CA7D2F6A21426E4300BC2640 /* README.mdown */; };
 		CA7D2F6E21426E4400BC2640 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CA7D2F6B21426E4400BC2640 /* LICENSE */; };
 		CA7D2F712142700300BC2640 /* NSString+Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7D2F702142700200BC2640 /* NSString+Ex.m */; };
+		CAC2C33521DDB4930034EED3 /* UIButton+Next.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC2C33421DDB4930034EED3 /* UIButton+Next.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA2C317421B5265600F78F79 /* WTImgOffsetButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTImgOffsetButton.h; sourceTree = "<group>"; };
+		CA2C317521B5265600F78F79 /* WTImgOffsetButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTImgOffsetButton.m; sourceTree = "<group>"; };
+		CA2FDA0D21F6F69100AE5087 /* UITextField+MaxLength.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+MaxLength.h"; sourceTree = "<group>"; };
+		CA2FDA0E21F6F69100AE5087 /* UITextField+MaxLength.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+MaxLength.m"; sourceTree = "<group>"; };
 		CA7D2D5121425FA600BC2640 /* WTCategories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WTCategories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7D2D5421425FA600BC2640 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA7D2D5521425FA600BC2640 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -177,6 +184,8 @@
 		CA7D2F6B21426E4400BC2640 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CA7D2F6F2142700200BC2640 /* NSString+Ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Ex.h"; sourceTree = "<group>"; };
 		CA7D2F702142700200BC2640 /* NSString+Ex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Ex.m"; sourceTree = "<group>"; };
+		CAC2C33321DDB4930034EED3 /* UIButton+Next.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Next.h"; sourceTree = "<group>"; };
+		CAC2C33421DDB4930034EED3 /* UIButton+Next.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Next.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +199,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA2FDA1021F6F69D00AE5087 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				CA2FDA0D21F6F69100AE5087 /* UITextField+MaxLength.h */,
+				CA2FDA0E21F6F69100AE5087 /* UITextField+MaxLength.m */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
 		CA7D2D4821425FA600BC2640 = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +257,7 @@
 		CA7D2E4B21425FCF00BC2640 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CA2FDA1021F6F69D00AE5087 /* UITextField */,
 				CA7D2F0D2142664600BC2640 /* UILabel */,
 				CA7D2F09214265D200BC2640 /* UIColor */,
 				CA7D2E4C21425FCF00BC2640 /* UIImage */,
@@ -279,10 +298,14 @@
 		CA7D2E5421425FCF00BC2640 /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
-				CA7D2E5521425FCF00BC2640 /* UIButton+CountDown.m */,
 				CA7D2E5621425FCF00BC2640 /* RCIBButton.h */,
 				CA7D2E5721425FCF00BC2640 /* RCIBButton.m */,
+				CAC2C33321DDB4930034EED3 /* UIButton+Next.h */,
+				CAC2C33421DDB4930034EED3 /* UIButton+Next.m */,
 				CA7D2E5821425FCF00BC2640 /* UIButton+CountDown.h */,
+				CA7D2E5521425FCF00BC2640 /* UIButton+CountDown.m */,
+				CA2C317421B5265600F78F79 /* WTImgOffsetButton.h */,
+				CA2C317521B5265600F78F79 /* WTImgOffsetButton.m */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -290,13 +313,13 @@
 		CA7D2E5921425FCF00BC2640 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				CA7D2E5F21425FCF00BC2640 /* UIView+Ex.h */,
 				CA7D2E5A21425FCF00BC2640 /* UIView+Ex.m */,
 				CA7D2E5B21425FCF00BC2640 /* UIView+LSCore.h */,
+				CA7D2E5E21425FCF00BC2640 /* UIView+LSCore.m */,
+				CA7D2E6021425FCF00BC2640 /* UIView+Frame.h */,
 				CA7D2E5C21425FCF00BC2640 /* UIView+Frame.m */,
 				CA7D2E5D21425FCF00BC2640 /* RCIBView.h */,
-				CA7D2E5E21425FCF00BC2640 /* UIView+LSCore.m */,
-				CA7D2E5F21425FCF00BC2640 /* UIView+Ex.h */,
-				CA7D2E6021425FCF00BC2640 /* UIView+Frame.h */,
 				CA7D2E6121425FCF00BC2640 /* RCIBView.m */,
 			);
 			path = UIView;
@@ -666,6 +689,7 @@
 				CA7D2EFC21425FD000BC2640 /* UIViewController+Ex.m in Sources */,
 				CA7D2F0421425FD000BC2640 /* MBProgressHUD+Add.m in Sources */,
 				CA7D2F5721426A6400BC2640 /* MJRefreshBackFooter.m in Sources */,
+				CAC2C33521DDB4930034EED3 /* UIButton+Next.m in Sources */,
 				CA7D2F6C21426E4400BC2640 /* MBProgressHUD.m in Sources */,
 				CA7D2F0821425FD000BC2640 /* NSString+Password.m in Sources */,
 				CA7D2F5121426A6400BC2640 /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -684,6 +708,7 @@
 				CA7D2F712142700300BC2640 /* NSString+Ex.m in Sources */,
 				CA7D2EFE21425FD000BC2640 /* UIControl+Event.m in Sources */,
 				CA7D2F5821426A6400BC2640 /* MJRefreshAutoFooter.m in Sources */,
+				CA2C317621B5265600F78F79 /* WTImgOffsetButton.m in Sources */,
 				CA7D2EF321425FD000BC2640 /* RCIBButton.m in Sources */,
 				CA7D2EFB21425FD000BC2640 /* UINavigationBar+Awesome.m in Sources */,
 				CA7D2EEF21425FD000BC2640 /* UIImage+Extension.m in Sources */,
@@ -705,6 +730,7 @@
 				CA7D2F4D21426A6400BC2640 /* MJRefreshBackStateFooter.m in Sources */,
 				CA7D2EF721425FD000BC2640 /* RCIBView.m in Sources */,
 				CA7D2EF521425FD000BC2640 /* UIView+Frame.m in Sources */,
+				CA2FDA0F21F6F69100AE5087 /* UITextField+MaxLength.m in Sources */,
 				CA7D2F4B21426A6400BC2640 /* UIView+MJExtension.m in Sources */,
 				CA7D2D6421425FA900BC2640 /* main.m in Sources */,
 				CA7D2D5621425FA600BC2640 /* AppDelegate.m in Sources */,

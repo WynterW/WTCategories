@@ -11,4 +11,5 @@
 
 - (CGSize)boundingRectWithSize:(CGSize)size;
 
+- (void)attributedWithFont:(UIFont *)font color:(UIColor *)color range:(NSRange)range;
 @end

@@ -23,4 +23,13 @@
     return retSize;
 }
 
+- (void)attributedWithFont:(UIFont *)font color:(UIColor *)color range:(NSRange)range {
+    NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:self.text];
+    //设置字号
+    [str addAttribute:NSFontAttributeName value:font range:range];
+    //设置文字颜色
+    [str addAttribute:NSForegroundColorAttributeName value:color range:range];
+    self.attributedText = str;
+}
+
 @end
