@@ -27,4 +27,9 @@
  */
 + (UIColor *)colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha;
 
+/**
+ 随机颜色
+ */
++ (UIColor *)colorWithRandom;
+
 @end

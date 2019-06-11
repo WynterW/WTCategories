@@ -14,7 +14,7 @@
  
  @param color  color
  */
-+ (nullable UIImage *)imageWithColor:(UIColor *)color;
++ (nullable UIImage *)imageWithColor:(UIColor *_Nullable)color;
 
 /**
  创建并返回指定颜色和大小的图片
@@ -22,6 +22,6 @@
  @param color  图片颜色.
  @param size   图片大小.
  */
-+ (nullable UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
++ (nullable UIImage *)imageWithColor:(UIColor *_Nullable)color size:(CGSize)size;
 
 @end

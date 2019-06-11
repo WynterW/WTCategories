@@ -11,6 +11,61 @@
 
 @implementation UIViewController (Ex)
 
+- (UINavigationController*)myNavigationController {
+    UINavigationController* nav = nil;
+    if ([self isKindOfClass:[UINavigationController class]]) {
+        nav = (id)self;
+    }
+    else {
+        if ([self isKindOfClass:[UITabBarController class]]) {
+            nav = ((UITabBarController*)self).selectedViewController.myNavigationController;
+        }
+        else {
+            nav = self.navigationController;
+        }
+    }
+    return nav;
+}
+
+#pragma mark - Windows 上最顶层展示的VC
++ (UIViewController *)topViewController {
+    UIViewController *resultVC;
+    resultVC = [self _topViewController:[[UIApplication sharedApplication].keyWindow rootViewController]];
+    while (resultVC.presentedViewController) {
+        resultVC = [self _topViewController:resultVC.presentedViewController];
+    }
+    return resultVC;
+}
+
++ (UIViewController *)_topViewController:(UIViewController *)vc {
+    if ([vc isKindOfClass:[UINavigationController class]]) {
+        return [self _topViewController:[(UINavigationController *)vc topViewController]];
+    } else if ([vc isKindOfClass:[UITabBarController class]]) {
+        return [self _topViewController:[(UITabBarController *)vc selectedViewController]];
+    } else {
+        return vc;
+    }
+    return nil;
+}
+
+#pragma mark - 逐层查找最靠前的nav
++ (UINavigationController *)nextNavigationController {
+    UIResponder *nextResponder = [self topViewController];
+    
+    do {
+        nextResponder = [nextResponder nextResponder];
+        
+        if ([nextResponder isKindOfClass:[UINavigationController class]])
+            return (UINavigationController*)nextResponder;
+        
+    } while (nextResponder != nil);
+    
+    UITabBarController *rootVC = (UITabBarController *)[[UIApplication sharedApplication].delegate window].rootViewController;
+    
+    return rootVC.selectedViewController;
+}
+
+#pragma mark - 是否打开定位
 - (BOOL)isOpenGPS {
     if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"请开启定位服务,否则无法获取附近站点信息" preferredStyle:UIAlertControllerStyleAlert];

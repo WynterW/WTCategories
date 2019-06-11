@@ -10,6 +10,19 @@
 
 @interface UIViewController (Ex)
 
+@property(nonatomic, strong, readonly) UINavigationController *myNavigationController;
+
+/**
+ Windows 上最顶层展示的VC
+ */
++ (UIViewController *)topViewController;
+
+
+/**
+  逐层查找最靠前的nav
+ */
++ (UINavigationController *)nextNavigationController;
+
 
 /**
  检测是否定位功能，是否打开如果关闭引导用户打开
